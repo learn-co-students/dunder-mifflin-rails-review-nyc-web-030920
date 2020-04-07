@@ -1,0 +1,6 @@
+<% @employees.each do |e| %>
+<%= link_to "#{e.first_name}  #{e.last_name}", employee_path(e) %><br>
+<br>
+<% end %>
+
+<%= button_to "New User", new_employee_path, method: :get%>
