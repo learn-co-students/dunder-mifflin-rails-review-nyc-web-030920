@@ -1,0 +1,12 @@
+<h1>Dunder Mifflin Employees</h1>
+
+<div class="index-container">
+
+  <% @employees.each do |employee| %>
+    <div class="index-tile">
+      <h2><%= link_to employee.name, employee %></h2>
+      <img class="index-img" src="<%= employee.img_url %>" alt="employee">
+    </div>
+  <% end %>
+  <%= link_to 'Add New Employee', new_employee_path %>
+</div>
