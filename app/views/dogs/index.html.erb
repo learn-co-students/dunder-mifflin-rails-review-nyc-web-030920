@@ -1,0 +1,19 @@
+<h1>All Dogs</h1>
+
+<ul>
+  <% if @sort %>
+      <% @sorted_dogs.each do |dog| %>
+        <li><%= link_to dog.name, dog %></li>
+      <% end %>
+  <% else %>
+    <% @dogs.each do |dog| %>
+        <li><%= link_to dog.name, dog %></li>
+      <% end %>
+  <% end %>
+</ul>
+
+<%# button to is a form with access to a params hash %>
+<%# by default it params is empty with no keys %>
+<%= button_to "Sort", dogs_path, method: :get, name: "sort" %>
+
+<%= button_to "Unsort", dogs_path, method: :get%>
