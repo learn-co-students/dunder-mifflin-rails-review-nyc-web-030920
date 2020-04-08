@@ -1,0 +1,10 @@
+<h1><%= @employee.alias %></h1>
+<li> First Name: <%= @employee.first_name %></li><br>
+<li> Last Name: <%= @employee.last_name %></li><br>
+<li> Office: <%= @employee.last_name %></li><br>
+<li> Title: <%= @employee.last_name %></li><br>
+<li> His/Her dog: <%= @employee.dog.name %></li><hr><br><br>
+<img class="index-img" src="<%= @employee.img_url %>" alt="employee">
+<%= button_to "Update Your Information", edit_employee_path, method: :get %> 
+
+

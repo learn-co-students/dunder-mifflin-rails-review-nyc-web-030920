@@ -1,0 +1,17 @@
+<h1>Dogs List</h1>
+<ul>
+ <% @dogs.each do |dog| %>
+ <li> Name: <%= link_to dog.name, dog_path(dog) %></li><br>
+<li> Breed: <%= dog.breed %></li><br>
+<li> Age: <%= dog.age %></li><br>
+<li> Owners: <% dog.employees.each do |employee| %>
+<li> Name: <%= employee.alias %>
+<% end %></li><hr><br><br><br>
+<% end %>
+</ul>
+
+<h1>Create A new Dog !</h1>
+
+ <%= button_to "Create A Dog", new_dog_path, method: :get %> 
+
+ 
