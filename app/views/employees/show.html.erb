@@ -1,0 +1,9 @@
+<h1><%="#{@employee.first_name} #{@employee.last_name}"%> </h1>
+<p>Alias: <%= @employee.alias %></p>
+<p>Title: <%= @employee.title %></p>
+<p>Office: <%= @employee.office %></p>
+<%= button_to "Edit Employee", edit_employee_path, method: :get %> 
+<%= button_to "Back to Employee Index", employees_path, method: :get %>
+<%= button_to "Back to Dogs Index", dogs_path, method: :get %>
+<br><br>
+<%= image_tag @employee.img_url %>

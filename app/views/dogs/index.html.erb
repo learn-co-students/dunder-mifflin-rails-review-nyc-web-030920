@@ -1,0 +1,8 @@
+<h1> All Dogs Available </h1>
+<ol><% @dogs.each do |dog| %>
+<li><%= link_to dog.name, dog_path(dog)%></li>
+<%end%>
+</ol>
+<br><br>
+<%= button_to "Back to Employee Index", employees_path, method: :get %>
+<%= button_to "Sort By Popularity", popular_dogs_path, method: :get %>

@@ -1,0 +1,7 @@
+<h1> List of Employees</h1>
+<ol>
+<% @employees.each do |employee| %>
+<li><%= link_to "#{employee.first_name} #{employee.last_name}", employee_path(employee) %></li> <br>
+<% end %>
+</ol>
+<%= button_to "Back to Dogs Index", dogs_path, method: :get %>
