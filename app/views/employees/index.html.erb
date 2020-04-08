@@ -1,0 +1,8 @@
+<h3>All employees: </h3>
+
+<ul>
+    <% @employees.each do |employee| %>
+        <% full_name = employee.first_name + " " + employee.last_name %>
+        <li><%= link_to full_name, employee_path(employee) %>
+    <% end %>
+</ul>
