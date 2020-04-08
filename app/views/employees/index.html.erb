@@ -1,0 +1,7 @@
+<%@employees.each do |employee|%>
+    <br><%=link_to employee.first_name, employee_path(employee)%><br>
+    <%=button_to "Edit Employee", edit_employee_path(employee), method: :get%>
+    <%end%> 
+
+<hr><%=button_to "New Employee", new_employee_path, method: :get%></hr>
+
