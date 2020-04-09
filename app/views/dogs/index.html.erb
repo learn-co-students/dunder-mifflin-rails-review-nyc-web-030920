@@ -1,0 +1,9 @@
+<h1>All Doggos</h1><br>
+
+<div class="index-container">
+<% @dogs.each do |dog| %>
+<div class="index-tile">
+<h2><%= link_to dog.name, dog %></h2>
+</div>
+<% end%>
+</div>
