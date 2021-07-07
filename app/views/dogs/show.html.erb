@@ -1,0 +1,14 @@
+<h1> <%= @dog.name %>'s Page</h1>
+
+<b>Age: </b><%= @dog.age %><br>
+<b>Breed: </b><%= @dog.breed %>
+
+<h2> Owners of Dog <h2>
+
+<ul>
+    <% @dog.employees.each do |employee| %>
+    <li><%= link_to employee.full_name, employee_path %></li><br>
+    <% end %>
+</ul>
+
+<%= button_to "Return to Homepage", dogs_path, method: :get %>
